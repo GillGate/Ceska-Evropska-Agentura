@@ -1,0 +1,43 @@
+.quick {
+	padding-top: 220px;
+	padding-bottom: 120px;
+
+	&__title {
+		max-width: 740px;
+		font-size: 52px;
+		line-height: 75px;
+		position: relative;
+		padding-left: 100px;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 168px;
+			height: 168px;
+			background: url(../img/registration.jpg) center no-repeat / cover;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(100%, -50%);
+		}
+	}
+
+	&__text {
+		display: flex;
+		margin-top: 56px;
+		font-size: 20px;
+		line-height: 32px;
+		padding-left: 100px;
+		
+
+		p {
+			width: 348px;
+			margin-right: 48px;
+		}
+
+		span {
+			color: @red;
+			font-weight: 600;
+		}
+	}
+}

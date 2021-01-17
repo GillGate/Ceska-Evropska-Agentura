@@ -1,0 +1,60 @@
+.founder {
+	background-color: @gray-bg;
+	padding: 90px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__person {
+		max-width: 234px;
+		text-align: center;
+	}
+
+	&__img {
+		margin-bottom: 22px;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	&__name {
+		display: inline-block;
+		margin-bottom: 6px;
+	}
+
+	&__quote {
+		max-width: 480px;
+		margin-left: 126px;
+		font-weight: 300;
+		font-size: 21px;
+		line-height: 30px;
+		position: relative;
+
+		&::before, &::after {
+			content: '';
+			display: block;
+			background: url(../img/quote.svg) left center repeat-x / contain;
+			position: absolute;
+		}
+
+		&::before {
+			width: 124px;
+			height: 114px;
+			top: -46px;
+			left: 0;
+			transform: translate(-100%, -100%);
+		}
+
+		&::after {
+			width: 206px;
+			height: 190px;
+			bottom: -46px;
+			right: 0;
+			transform: translate(50%, 100%) rotate(180deg);
+		}
+	}
+}

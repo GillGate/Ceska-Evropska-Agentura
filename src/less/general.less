@@ -1,0 +1,57 @@
+.reset();
+
+.container {
+	.wrapper();
+}
+
+body {
+	font-family: "Open Sans";
+}
+h1, h2 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 33px;
+	line-height: 45px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 42px;
+
+	span {
+		color: @red;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+.button {
+	display: inline-block;
+	width: 310px;
+	height: 66px;
+	line-height: 62px;
+	font-size: 18px;
+	font-weight: 600;
+	color: @white;
+	text-decoration: none;
+	background-color: @blue;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background .3s linear;
+
+	&:hover, &:focus {
+		background-color: @red;
+	}
+
+	&:active {
+		background: darken(@red, 15%);
+	}
+}

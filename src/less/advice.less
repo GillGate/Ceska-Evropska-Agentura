@@ -1,0 +1,54 @@
+.advice {
+	height: 330px;
+	background: @gray url(../img/cs-bg.jpg) no-repeat center / cover;
+	color: @white;
+
+	&__wrapper {
+		height: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 350px;
+		height: 65px;
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 28px;
+		letter-spacing: 0.4px;
+		color: @white;
+		background-color: rgba(255, 255, 255, 0.2);
+		border: 2px solid @gray-border;
+		border-radius: 5px;
+		cursor: pointer;
+		backdrop-filter: blur(4px);
+		position: relative;
+		transition: background .3s linear;
+
+		&:hover, &:focus {
+			background-color: @red;
+			border-color: transparent;
+		}
+
+		&:active {
+			background: darken(@red, 15%);
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			background: url(../img/cs-button.svg) no-repeat / contain;
+		}
+	}
+
+	&__caption {
+		margin-top: 20px;
+	}
+}

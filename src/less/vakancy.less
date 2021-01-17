@@ -1,0 +1,142 @@
+.vakancy {
+	padding: 90px 0;
+	text-align: center;
+
+	h2 {
+		padding-left: 50px;
+		text-align: left;
+	}
+
+	&__list {
+		margin-top: 92px;
+		text-align: left;
+	}
+
+	&__item {
+		padding: 62px 50px 32px;
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		border-collapse: collapse;
+
+		&--special {
+			position: relative;
+
+			&::before {
+				content: 'Специальные условия';
+				display: block;
+				padding: 2px 26px;
+				text-transform: uppercase;
+				font-size: 12px;
+				line-height: 16px;
+				background-color: @red;
+				color: @white;
+				font-weight: 700;
+				position: absolute;
+				top: 25px;
+				left: 50px;
+			}
+
+			.vakancy__button {
+				&::after {
+					content: '';
+					display: inline-block;
+					vertical-align: sub;
+					width: 20px;
+					height: 20px;
+					margin-left: 10px;
+					background: url(../img/special.svg) no-repeat center / contain;
+				}
+			}
+		}
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		display: flex;
+	}
+
+	&__img {
+		width: 82px;
+		height: 82px;
+
+		img {
+			width: inherit;
+			height: inherit;
+			object-fit: cover;
+		}
+	}
+
+	&__name {
+		margin-left: 22px;
+		max-width: 500px;
+	}
+
+	&__location {
+		font-size: 14px;
+	}
+
+	&__price {
+		flex-basis: 220px;
+		font-size: 14px;
+		line-height: 26px;
+		text-align: right;
+
+		span {
+			display: block;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: 600;
+		}
+	}
+
+	&__body {
+		margin-top: 46px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	&__conditions {
+		li {
+			list-style: disc inside;
+		}
+	}
+
+	&__shift {
+		&:last-child {
+			&::before {
+				margin-left: 7px;
+			}
+		}
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			margin-right: 5px;
+			
+			background: url(../img/job-mark.svg) no-repeat / contain;
+		}
+	}
+
+	&__button {
+		width: 170px;
+		height: 45px;
+		line-height: 43px;
+		font-size: 14px;
+	}
+
+	&__more {
+		margin: 80px auto 0;
+		width: 250px;
+		height: 65px;
+		line-height: 63px;
+		text-align: center;
+	}
+}
