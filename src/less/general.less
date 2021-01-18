@@ -6,6 +6,7 @@
 
 body {
 	font-family: "Open Sans";
+	color: @black;
 }
 h1, h2 {
 	text-transform: uppercase;
@@ -32,11 +33,22 @@ h3 {
 	font-weight: 700;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
 .button {
 	display: inline-block;
 	width: 310px;
 	height: 66px;
-	line-height: 62px;
+	line-height: 60px;
 	font-size: 18px;
 	font-weight: 600;
 	color: @white;
