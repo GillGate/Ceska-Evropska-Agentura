@@ -1,9 +1,63 @@
 .header {
-	min-height: 740px;
-	height: 100vh;
-	max-height: 1080px;
-	background: @blue url(../img/header-bg.jpg) no-repeat center / cover;
+	background: no-repeat center top / cover;
 	color: @white;
+
+	&--main {
+		min-height: 740px;
+		height: 100vh;
+		max-height: 1080px;
+		background-color: @blue;
+		background-image: url(../img/header-bg.jpg);
+
+		.md-block({
+			min-height: 540px;
+		});
+
+		.xs-block({
+			min-height: 300px;
+			height: 94vh;
+		});
+
+		.header__bodyWrapper {
+			transform: translateY(-20%);
+
+			.lg-block({
+				transform: translateY(-30%);
+			});
+		}
+
+		.header__body {
+			justify-content: flex-start;
+			max-width: 500px;
+			max-height: 900px;
+			padding-left: 140px;
+
+			.md-block({
+				padding-left: 80px;
+			});
+
+			.sm-block({
+				margin: 0 auto;
+				max-width: 350px;
+				padding: 0 30px;
+			});
+		}
+	}
+
+	&--vakancy {
+		height: 528px;
+		background-image: url(../img/vakancy-bg.jpg);
+
+		.md-block({
+			height: 420px;
+		});
+
+		.header__body {
+			.md-block({
+				height: 280px;
+			});
+		}
+	}
 
 	&__wrapper {
 		max-width: 1440px;
@@ -11,6 +65,11 @@
 		margin: 0 auto;
 		padding: 0 70px;
 		box-sizing: border-box;
+		position: relative;
+
+		.sm-block({
+			padding: 0;
+		});
 	}
 
 	&__head {
@@ -19,6 +78,22 @@
 		justify-content: space-between;
 		padding-top: 18px;
 		box-sizing: border-box;
+
+		.lg-block({
+			flex-wrap: wrap;
+		});
+
+		.sm-block({
+			flex-direction: row-reverse;
+			padding: 16px 30px;
+			background: @white;
+		});
+	}
+
+	&__logo {
+		img {
+			display: inherit;
+		}
 	}
 
 	a {
@@ -29,12 +104,12 @@
 		font-weight: 600;
 	}
 
-	&__nav {
-		display: flex;
-	}
-
 	&__lang {
 		margin-left: 22px;
+
+		.sm-block({
+			display: none;
+		});
 
 		a {
 			margin: 0 2px;
@@ -43,8 +118,7 @@
 		}
 
 		&--current {
-			background: rgba(255, 255, 255, 0.2);
-			border: 1px solid @gray-border;
+			background: @red;
 			backdrop-filter: blur(12px);
 		}
 	}
@@ -53,9 +127,15 @@
 		text-align: right;
 		font-size: 12px;
 		line-height: 16px;
+		color: @white;
+
+		.sm-block({
+			display: none;
+		});
 		
 		a {
 			display: block;
+			color: inherit;
 			font-size: 22px;
 			line-height: 24px;
 			font-weight: 700;
@@ -65,17 +145,12 @@
 
 	&__body {
 		width: 100%;
-		max-width: 500px;
-		padding-left: 140px;
 		margin-top: auto;
 		display: flex;
 		align-items: center;
 		height: 100%;
-		max-height: 900px;
-	}
-
-	&__bodyWrapper {
-		transform: translateY(-20%);
+		max-height: 460px;
+		justify-content: center;
 	}
 
 	&__text {
@@ -85,7 +160,24 @@
 
 	&__button {
 		margin-top: 50px;
-		background-color: @gray;
-		border: 3px solid @gray-border;
+
+		.sm-block({
+			margin-top: 30px;
+		});
+	}
+
+	&__call {
+		display: none;
+
+		.sm-block({
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: @white;
+			border-radius: 50%;
+			position: absolute;
+			right: 30px;
+			bottom: 30px;
+		});
 	}
 }

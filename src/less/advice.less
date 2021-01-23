@@ -3,8 +3,27 @@
 	background: @gray url(../img/cs-bg.jpg) no-repeat center / cover;
 	color: @white;
 
+	.md-block({
+		height: 176px;
+	});
+
+	.sm-block ({
+		padding: 50px 0;
+		background-image: url(../img/cs-bg-2.jpg);
+	});
+
 	&--second {
-		background-image: url(../img/cs-bg-2.jpg)
+		background-image: url(../img/cs-bg-2.jpg);
+
+		.md-block({
+			.advice__title {
+				padding-right: 80px;
+			}
+		});
+
+		.sm-block ({
+			display: none;
+		});	
 	}
 
 	&__wrapper {
@@ -12,6 +31,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		.sm-block({
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+		});
 	}
 
 	&__button {
@@ -21,38 +46,44 @@
 		width: 350px;
 		height: 65px;
 		font-weight: 600;
-		font-size: 17px;
+		font-size: 18px;
 		line-height: 28px;
 		letter-spacing: 0.4px;
 		color: @white;
-		background-color: rgba(255, 255, 255, 0.2);
-		border: 2px solid @gray-border;
 		border-radius: 5px;
 		cursor: pointer;
 		backdrop-filter: blur(4px);
 		position: relative;
-		transition: background .3s linear;
 
-		&:hover, &:focus {
-			background-color: @red;
-			border-color: transparent;
-		}
+		.sm-block({
+			order: 1;
+		});
+	}
 
-		&:active {
-			background: darken(@red, 15%);
-		}
+	&__info {
+		max-width: 500px;
 
-		&::after {
-			content: '';
-			display: block;
-			width: 20px;
-			height: 20px;
-			margin-left: 20px;
-			background: url(../img/cs-button.svg) no-repeat / contain;
-		}
+		.md-block({
+			max-width: 420px;
+		});
+
+		.sm-block ({
+			margin-bottom: 10px;
+		});	
 	}
 
 	&__caption {
 		margin-top: 20px;
+		padding-right: 100px;
+
+		.md-block({
+			margin-top: 10px;
+			font-size: 12px;
+			line-height: 16px;
+		});
+
+		.sm-block({
+			display: none;
+		});
 	}
 }

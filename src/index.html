@@ -3,31 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EAC</title>
+	<title>Česká evropská agentura</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<header class="header">
+	<div class="popup popup--consultation">
+		<div class="popup__wrapper">
+			<button class="popup__close"><img src="img/close.svg" alt="Закрыть" width="30" height="30"></button>
+			<h2 class="popup__title">Получить <span>бесплатную</span> консультацию</h2>
+			<p class="popup__caption">
+				Оставьте заявку, и в ближайшее время мы свяжемся с Вами.  Наши операторы бесплатно проконсультируют Вас по сбору необходимых документов, вопросам касательно перезда, работы и жизни в Чехии.
+			</p>
+			<form class="form popup__form">
+				<label class="form__input"><input type="text" placeholder="Имя"></label>
+				<label class="form__input"><input type="tel" placeholder="Номер телефона"></label>
+				<label class="form__input form__input--textarea"><textarea placeholder="Комментарий"></textarea></label>
+				<button class="button form__button">Оставить заявку</button>
+			</form>
+		</div>
+	</div>
+	<header class="header header--main">
 		<div class="header__wrapper">
 			<div class="header__head">
-				<div class="header__logo">
-					<img src="img/logo.png" alt="Česká evropská agentura">
-				</div>
+				<a class="header__logo">
+					<picture>
+						<source media="(max-width:768px)" srcset="img/logo.jpg">
+						<img src="img/logo-white.png" alt="Česká evropská agentura">
+					</picture>
+				</a>
 				<div class="nav header__nav">
-					<div class="nav__burger"></div>
-					<nav class="nav__body">
-						<a href="#about">О Нас</a>
-						<a href="#vakancies">Вакансии</a>
-						<a href="#start">Как начать?</a>
-						<a href="#faq">FAQ</a>
-						<a href="#reviews">Отзывы</a>
-						<a href="#contacts">Контакты</a>
-					</nav>
-					<div class="header__lang">
-						<a href="#" class="header__lang--current">RU</a>
-						<a href="#">UA</a>
-						<a href="#">CZ</a>
+					<div class="nav__bar"><img src="img/nav-bar.svg" alt="Open menu" width="30" height="30"></div>
+					<div class="nav__openHeader">
+						<div class="header__phone">
+							<a href="tel:+420775265842">+420 775 265 842</a>
+							<span>Viber, WhatsApp, Telegram</span>
+						</div>
+						<div class="nav__close"><img src="img/close.svg" alt="Закрыть" width="34" height="34"></div>
 					</div>
+					<nav class="nav__body">
+						<a class="nav__link" href="#about">О Нас</a>
+						<a class="nav__link" href="#vakancies">Вакансии</a>
+						<a class="nav__link" href="#start">Как начать?</a>
+						<a class="nav__link" href="#faq">FAQ</a>
+						<a class="nav__link" href="#reviews">Отзывы</a>
+						<a class="nav__link" href="#contacts">Контакты</a>
+					</nav>
+				</div>
+				<div class="header__lang">
+					<a href="#" class="header__lang--current">RU</a>
+					<a href="#">UA</a>
+					<a href="#">CZ</a>
 				</div>
 				<div class="header__phone">
 					<a href="tel:+420775265842">+420 775 265 842</a>
@@ -40,9 +65,12 @@
 					<p class="header__text">
 						Наши операторы бесплатно проконсультируют по сбору необходимых документов, вопросам переезда, а также любым другим вопросам связанным с работой в Чехии.
 					</p>
-					<button class="button header__button">Получить консультацию</button>
+					<button class="button header__button getConsultation">Получить консультацию</button>
 				</div>
 			</div>
+			<a href="tel:+420775265842" class="header__call">
+				<img src="img/header-call.svg" alt="Call" width="50" height="50">
+			</a>
 		</div>
 	</header>
 	<section class="about" id="about">
@@ -82,15 +110,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="about__item">
-				<div class="about__col"></div>
-				<div class="about__col about__info--last">
+			<div class="about__item about__item--last">
+				<div class="about__col">
+					<div class="about__info about__info--last">
+						<p class="about__text">
+							В настоящее время ČEA трудоустраивает порядка более тысячи работников и долгосрочно сотрудничает с более чем 60 партнерами. 
+						</p>
+					</div>
+				</div>
+				<div class="about__col">
 					<div class="about__img">
 						<img src="img/about-3.jpg" alt="">
 					</div>
-					<p class="about__text">
-						В настоящее время ČEA трудоустраивает порядка более тысячи работников и долгосрочно сотрудничает с более чем 60 партнерами. 
-					</p>
 				</div>
 			</div>
 		</div>
@@ -123,7 +154,7 @@
 				</li>
 				<li class="why__item why__item--large">
 					<p class="why__digit">5000+</p>
-					<p class="why__caption">успешно трудоустроенных сотрудников</p>
+					<p class="why__caption">довольных сотрудников</p>
 				</li>
 				<li class="why__item why__item--small">
 					<p class="why__digit">5+</p>
@@ -144,7 +175,7 @@
 	</section>
 	<section class="advice">
 		<div class="container advice__wrapper">
-			<button class="advice__button">Получить консультацию</button>
+			<button class="button advice__button getConsultation">Получить консультацию</button>
 			<div class="advice__info">
 				<h2 class="advice__title">
 					Получите бесплатную<br>
@@ -156,10 +187,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="vakancy" id="vakancies">
+	<section class="vakancy vakancy--main" id="vakancies">
 		<div class="container">
 			<h2>Актуальные вакансии</h2>
-			<ul class="vakancy__list">
+			<ul class="vakancy__list vakancy__list--main">
 				<li class="vakancy__item">
 					<div class="vakancy__head">
 						<div class="vakancy__info">
@@ -178,6 +209,11 @@
 							<span>105 Kč/час</span>
 						</div>
 					</div>
+					<div class="vakancy__desc">
+						<p>
+							Работодатель предоставляет жилье. 3000 крон / месяц (вычитается из заработной платы). Описание вакансии: изготовление, мойка, сушка и контроль качества деталей.
+						</p>
+					</div>
 					<div class="vakancy__body">
 						<ul class="vakancy__conditions">
 							<li>для женщин и мужчин</li>
@@ -188,7 +224,10 @@
 							<span class="vakancy__shift">18:00 - 6:00</span>
 							<span class="vakancy__shift">6:00 - 18:00</span>
 						</p>
-						<button class="button vakancy__button">Подробнее</button>
+						<button class="button vakancy__button">
+							<span>Подробнее</span>
+							<span class="vakancy__button--mobile">Забронировать вакансию</span>
+						</button>
 					</div>
 				</li>
 				<li class="vakancy__item">
@@ -209,6 +248,11 @@
 							<span>105 Kč/час</span>
 						</div>
 					</div>
+					<div class="vakancy__desc">
+						<p>
+							Работодатель предоставляет жилье. 3000 крон / месяц (вычитается из заработной платы). Описание вакансии: изготовление, мойка, сушка и контроль качества деталей.
+						</p>
+					</div>
 					<div class="vakancy__body">
 						<ul class="vakancy__conditions">
 							<li>для женщин и мужчин</li>
@@ -219,10 +263,13 @@
 							<span class="vakancy__shift">18:00 - 6:00</span>
 							<span class="vakancy__shift">6:00 - 18:00</span>
 						</p>
-						<button class="button vakancy__button">Подробнее</button>
+						<button class="button vakancy__button">
+							<span>Подробнее</span>
+							<span class="vakancy__button--mobile">Забронировать вакансию</span>
+						</button>
 					</div>
 				</li>
-				<li class="vakancy__item vakancy__item--special">
+				<li class="vakancy__item vakancy__item--special" data-special="СПЕЦИАЛЬНЫЕ УСЛОВИЯ: оформление документов за счет работодателя" data-special-mobile="СПЕЦИАЛЬНЫЕ УСЛОВИЯ">
 					<div class="vakancy__head">
 						<div class="vakancy__info">
 							<div class="vakancy__img">
@@ -240,6 +287,11 @@
 							<span>105 Kč/час</span>
 						</div>
 					</div>
+					<div class="vakancy__desc">
+						<p>
+							Работодатель предоставляет жилье. 3000 крон / месяц (вычитается из заработной платы). Описание вакансии: изготовление, мойка, сушка и контроль качества деталей.
+						</p>
+					</div>
 					<div class="vakancy__body">
 						<ul class="vakancy__conditions">
 							<li>для женщин и мужчин</li>
@@ -250,7 +302,10 @@
 							<span class="vakancy__shift">18:00 - 6:00</span>
 							<span class="vakancy__shift">6:00 - 18:00</span>
 						</p>
-						<button class="button vakancy__button">Подробнее</button>
+						<button class="button vakancy__button">
+							<span>Подробнее</span>
+							<span class="vakancy__button--mobile">Забронировать вакансию</span>
+						</button>
 					</div>
 				</li>
 				<li class="vakancy__item">
@@ -271,6 +326,11 @@
 							<span>105 Kč/час</span>
 						</div>
 					</div>
+					<div class="vakancy__desc">
+						<p>
+							Работодатель предоставляет жилье. 3000 крон / месяц (вычитается из заработной платы). Описание вакансии: изготовление, мойка, сушка и контроль качества деталей.
+						</p>
+					</div>
 					<div class="vakancy__body">
 						<ul class="vakancy__conditions">
 							<li>для женщин и мужчин</li>
@@ -281,11 +341,15 @@
 							<span class="vakancy__shift">18:00 - 6:00</span>
 							<span class="vakancy__shift">6:00 - 18:00</span>
 						</p>
-						<button class="button vakancy__button">Подробнее</button>
+						<button class="button vakancy__button">
+							<span>Подробнее</span>
+							<span class="vakancy__button--mobile">Забронировать вакансию</span>
+						</button>
 					</div>
 				</li>
 			</ul>
-			<a href="#" class="button vakancy__more">Больше вакансий</a>
+			<a href="/vakancies.html" class="button vakancy__more">Больше вакансий</a>
+			<a href="/vakancies.html" class="all vakancy__all">Больше вакансий</a>
 		</div>
 	</section>
 	<section class="start" id="start">
@@ -293,22 +357,31 @@
 			<h2>Как начать<span>?</span></h2>
 			<ol class="start__list">
 				<li class="start__item start__item--1">
-					<h3 class="start__title">
+					<h3 class="start__title" data-step="1">
 						Оставить<br>
 						заявку
 					</h3>
+					<p class="start__text">
+						На этом этапе мы дадим  Вам консультацию по всем вопросам оформления визы и трудоустройства 
+					</p>
 				</li>
 				<li class="start__item start__item--2">
-					<h3 class="start__title">
+					<h3 class="start__title" data-step="2">
 						Получить<br>
 						визу
 					</h3>
+					<p class="start__text">
+						На этом этапе мы дадим  Вам консультацию по всем вопросам оформления визы и трудоустройства 
+					</p>
 				</li>
 				<li class="start__item start__item--3">
-					<h3 class="start__title">
+					<h3 class="start__title" data-step="3">
 						Приступить<br>
 						к работе
 					</h3>
+					<p class="start__text">
+						На этом этапе мы дадим  Вам консультацию по всем вопросам оформления визы и трудоустройства 
+					</p>
 				</li>
 			</ol>
 		</div>
@@ -356,69 +429,70 @@
 		<div class="container advice__wrapper">
 			<div class="advice__info">
 				<h2 class="advice__title">
-					Нужна консультация или <br>
-					помощь в подборе вакансий? 
+					НЕОбходима помощь в подборе вакансии? 
 				</h2>
 				<p class="advice__caption">
 					Оставьте заявку, и в ближайшее время наш менеджер свяжется с вами.
 				</p>
 			</div>
-			<button class="advice__button">Получить консультацию</button>
+			<button class="button advice__button getConsultation">Получить консультацию</button>
 		</div>
 	</section>
-	<section class="qanda" id="faq">
+	<section class="faq" id="faq">
 		<div class="container">
-			<h2 class="qanda__title">Вопросы <span>&</span> Ответы </h2>
-			<ul class="qanda__list">
-				<li class="qanda__item">
+			<h2 class="faq__title">Вопросы <span>&</span> Ответы </h2>
+			<ul class="faq__list">
+				<li class="faq__item">
 					<h3>Сколько времени занимает оформление документов?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						В зависимости от вакансии от 21 до 45 дней.
 					</p>
 				</li>
-				<li class="qanda__item">
-					<h3>Как производится оплата за изготовление документов?</h3>
+				<li class="faq__item">
+					<h3>Как производиться оплата за изготовление документов?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						Оплата производится на карту ПриватБанка, с помощью электронного перевода Western Union, либо при личной встрече с куратором в Вашем городе. Также, существует возможность отправить половину суммы перед началом процесса оформления документов, а остальную часть по их готовности.
 					</p>
 				</li>
-				<li class="qanda__item qanda__item--active">
+				<li class="faq__item">
 					<h3>Как и когда выплачиваются заработная плата?</h3>
 					<p>
 						Деньги выплачиваются наличными, каждый месяц с 15 по 20 число за предыдущий месяц. Каждую неделю по потребности выдается аванс 1000-2000 крон. По окончанию работы - полный расчёт
 					</p>
 				</li>
-				<li class="qanda__item">
+				<li class="faq__item">
 					<h3>По приезде в Чехию нужно ли проходить карантин?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						Нет. По приезду в Чехию вы обязаны пройти тест на COVID-19 в медицинской лаборатории. По его негативном результате можете приступать к работе. Время ожидания до 24 часов. Оплата взимается с заработной платы 1750 крон.
 					</p>
 				</li>
-				<li class="qanda__item">
+				<li class="faq__item">
 					<h3>Какие вакансии вы предоставляете?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						Актуальные вакансии всегда можно найти на нашем сайте. В основном - это логистические центры, автомобильные заводы, типография, колбасный цех, завод по изготовлению полиэтиленовых пакетов.
 					</p>
 				</li>
-				<li class="qanda__item">
-					<h3>По приезде нас кто-то встретит?</h3>
+				<li class="faq__item">
+					<h3>По приезду нас кто-то встретит?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						Во время процесса изготовления документов за Вами будет закреплен наш менеджер. Непосредственно перед вашим выездом вам предоставят контакт на координатора, который встретит Вас и будет курировать все время вашего пребывания в Чехии.
 					</p>
 				</li>
-				<li class="qanda__item">
+				<li class="faq__item">
 					<h3>
 						Предоставляется ли жилье на время работы?<br>
 						Какая стоимость?
 					</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						В зависимости от места Вашей работы мы предоставляем проживание бесплатное, либо на некоторых вакансиях взимается денежная сумма в размере от 3000 до 4500 крон.<br>
+						Семейные пары имеют возможность проживать вместе.
 					</p>
 				</li>
-				<li class="qanda__item">
+				<li class="faq__item">
 					<h3>Какие расходы нас ожидают ежемесячно в Чехии?</h3>
 					<p>
-						Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вдали текста переписывается все запятой встретил дороге заглавных, большого, букв.
+						Питание: стоимость продуктов в Чехии не сильно отличается от стоимости продуктов в странах СНГ. В зависимости от ваших потребностей это сумма от 2000-5000 тысяч крон.<br>
+						Все остальные затраты это исключительно личное дело каждого человека, но как таковых обязательных затрат не предвидится.
 					</p>
 				</li>
 			</ul>
@@ -428,7 +502,7 @@
 		<div class="container">
 			<h2 class="review__title">Отзывы наших клиентов</h2>
 			<ul class="review__list">
-				<li href="#" class="review__item">
+				<li class="review__item">
 					<img src="img/review-1.jpg" alt="">
 					<div class="review__body">
 						<a href="#" class="review__play"></a>
@@ -459,7 +533,7 @@
 					</div>
 				</li>
 			</ul>
-			<a href="#" class="review__allLink">Смотреть все отзывы</a>
+			<a href="#" class="all review__all">Смотреть все отзывы</a>
 		</div>
 	</section>
 	<section class="partner">
@@ -478,6 +552,18 @@
 		<div class="address">
 			<h2 class="visually-hidden">Конктакты</h2>
 			<div class="address__wrapper">
+				<div class="address__header">
+					<div class="address__img">
+						<img src="img/logo.jpg" alt="">
+					</div>
+					<div class="address__headerInfo">
+						<h3 class="address__title">Česko Evropská Agentura s.r.o.</h3>
+						<p class="address__info">
+							IČO: 05226511<br>
+							DIČ: CZ05226511
+						</p>
+					</div>
+				</div>
 				<ul class="address__list">
 					<li class="address__item address__item--location">
 						<h3 class="address__title">Adresa</h3>
@@ -488,13 +574,6 @@
 							</address>
 						</div>
 					</li>
-					<li class="address__item address__item--mail">
-						<h3 class="address__title">Česko Evropská Agentura s.r.o. </h3>
-						<div class="address__info">
-							IČO: 05226511 <br>
-							DIČ: CZ05226511
-						</div>
-					</li>
 					<li class="address__item address__item--phone">
 						<h3 class="address__title">Telefon</h3>
 						<div class="address__info">
@@ -502,11 +581,23 @@
 						</div>
 					</li>
 				</ul>
-				<div class="address__mediaWrapper">
-					<a href="#" class="address__media address__media--fb">Facebook</a>
-					<a href="#" class="address__media address__media--inst">Instagram</a>
-					<a href="#" class="address__media address__media--whatsapp">WhatsApp</a>
-					<a href="#" class="address__media address__media--tg">Telegram</a>
+				<div class="address__footer">
+					<div class="address__social">
+						<h3 class="address__title">
+							Свяжитесь<br>
+							с нами!
+						</h3>
+						<div class="address__socialWrapper">
+							<a href="#"><img src="img/social-whatsapp.svg" alt="" width="31" height="31"></a>
+							<a href="#"><img src="img/social-tg.svg" alt="" width="31" height="31"></a>
+							<a href="#"><img src="img/social-viber.svg" alt="" width="31" height="31"></a>
+						</div>
+					</div>
+					<div class="address__mediaWrapper">
+						<a href="#" class="address__media address__media--fb">Facebook</a>
+						<a href="#" class="address__media address__media--yt">YouTube</a>
+						<a href="#" class="address__media address__media--inst">Instagram</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -519,24 +610,25 @@
 				<label class="form__input"><input type="text" placeholder="Имя"></label>
 				<label class="form__input"><input type="tel" placeholder="Номер телефона"></label>
 				<label class="form__input"><textarea placeholder="Комментарий"></textarea></label>
-				<button class="button form__button">Получить консультацию</button>
+				<button class="button form__button">Оставить заявку</button>
 			</form>
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="container footer__wrapper">
 			<div class="footer__nav">
-				<a href="/">Главная</a>
-				<a href="#about">О Нас</a>
-				<a href="#vakancies">Вакансии</a>
-				<a href="#start">Как начать?</a>
-				<a href="#faq">FAQ</a>
-				<a href="#reviews">Отзывы</a>
+				<a>Главная</a>
+				<a class="footer__link" href="#about">О Нас</a>
+				<a class="footer__link" href="#vakancies">Вакансии</a>
+				<a class="footer__link" href="#start">Как начать?</a>
+				<a class="footer__link" href="#faq">FAQ</a>
+				<a class="footer__link" href="#reviews">Отзывы</a>
 			</div>
 			<p class="footer__text">
 				© Copyright 2021. Все права защищены.
 			</p>
 		</div>
 	</footer>
+	<script src="js/all.js"></script>
 </body>
 </html>
