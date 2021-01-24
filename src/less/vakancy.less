@@ -67,6 +67,7 @@
 			margin-bottom: 20px;
 			color: @red;
 			transition: background .3s linear, color .3s linear;
+			text-align: center;
 
 			.md-block({
 				border-width: 1px;
@@ -205,18 +206,6 @@
 					background-color: darken(@red, 15%);
 					color: darken(@white, 15%);
 				}
-
-				/*
-				&::after {
-					content: '';
-					display: inline-block;
-					vertical-align: sub;
-					width: 20px;
-					height: 20px;
-					margin-left: 10px;
-					background: url(../img/special.svg) no-repeat center / contain;
-				}
-				*/
 			}
 		}
 	}
@@ -257,10 +246,18 @@
 		margin-left: 22px;
 		max-width: 500px;
 
+		.md-block({
+			max-width: 400px;
+		});
+
 		.sm-block({
 			max-width: 350px;
 			margin-top: -4px;
 			margin-left: 6px;
+		});
+
+		.xs-block({
+			max-width: 310px !important;
 		});
 	}
 
@@ -489,5 +486,287 @@
 			display: inline-block;
 			margin: 16px 30px;
 		});
+	}
+
+	&__popup {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.popup__close {
+			margin-top: -30px;
+			margin-right: -46px;
+			
+			.md-block({
+				margin-top: -10px;
+				margin-right: -20px;
+			});
+
+			.sm-block({
+				margin: 0;
+			});
+		}
+
+		.popup__wrapper {
+			padding: 40px 50px;
+			width: 100%;
+			max-width: 1100px;
+
+			.md-block({
+				padding: 20px 30px;
+				max-width: 600px;
+			});
+
+			.md-block({
+				padding: 20px 30px;
+				max-width: 450px;
+			});
+		}
+
+		.vakancy__categoryList {
+			&::before {
+				display: none;
+			}
+		}
+
+		.vakancy__price {
+			.sm-block({
+				display: none;
+			});
+
+			&--mobile {
+				display: none;
+
+				.sm-block({
+					margin-top: 0px;
+					display: flex;
+					color: @blue;
+				});
+			}
+
+			span {
+				font-size: 24px;
+				line-height: 32px;
+
+				.md-block({
+					font-size: 20px;
+					line-height: 26px;
+				});
+
+				.sm-block({
+					font-size: 16px;
+					line-height: 24px;
+				});
+			}
+		}
+
+		.vakancy__img {
+			.sm-block({
+				display: none;
+			});
+		}
+
+		.vakancy__name {
+			.md-block({
+				margin-left: 10px;
+			});
+
+			.sm-block({
+				display: flex;
+				flex-direction: column-reverse;
+				margin-left: 0;
+				max-width: 450px;
+			});
+		}
+
+		.vakancy__title {
+			.sm-block({
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+			});
+		}
+
+		.vakancy__location {
+			.sm-block({
+				font-size: 16px;
+				line-height: 26px;
+				margin-top: 6px;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 10px;
+					height: 15px;
+					margin-right: 7px;
+					margin-bottom: -1px;
+					background: url(../img/location.svg) no-repeat center / contain;
+				}
+			});
+		}
+
+		.vakancy__desc {
+			display: block;
+
+			.md-block({
+				margin-top: 10px;
+			});
+
+			.sm-block({
+				display: none;
+			});
+		}
+
+		.vakancy__body {
+			margin-top: 10px;
+			justify-content: flex-start;
+
+			.md-block({
+				margin-top: 20px;
+			});
+
+			.sm-block({
+				margin-top: 10px;
+			});
+		}
+
+		.vakancy__conditions {
+			margin-right: 60px;
+
+			.md-block({
+				margin-right: 30px;
+				margin-bottom: 10px;
+			});
+		}
+
+		.vakancy__formWrapper {
+			margin-top: 12px;
+
+			.sm-block({
+				max-width: 320px;
+				margin: 36px auto 0;
+			});	
+		}
+
+		.vakancy__formTitle {
+			text-align: center;
+
+			.sm-block({
+				font-size: 24px;
+				line-height: 32px;
+				text-align: left;
+			});	
+		}
+
+		.vakancy__formCaption {
+			display: none;
+
+			.sm-block({
+				display: block;
+				margin-top: 10px;
+				font-size: 14px;
+				line-height: 21px;
+			});	
+		}
+
+		.vakancy__form {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 24px;
+
+			.md-block({
+				flex-wrap: wrap;
+				margin-top: 12px;
+			});
+
+			.sm-block({
+				margin-top: 20px;
+			});
+		}
+
+		.form__input {
+			width: 100%;
+			max-width: 305px;
+
+			.md-block({
+				margin: 0px auto 10px;
+				max-width: 350px;
+			});
+
+			input {
+				.sm-block({
+					height: 56px;
+				});
+			}
+		}
+
+		.form__button {
+			margin-top: 0;
+			max-width: 305px;
+			height: 56px;
+			font-size: 16px;
+			line-height: 52px;
+			background-color: @blue;
+			border-color: @blue;
+
+			.md-block({
+				min-width: 340px;
+				max-width: 350px;
+				margin: 10px auto 0;
+			});
+
+			.sm-block({
+				min-width: auto;
+			});	
+
+			&:hover, &:focus {
+				background-color: @white;
+				color: @blue;
+			}
+		}
+	}
+
+	&__item--special {
+		.vakancy__popup {
+			.vakancy__info {
+				position: relative;
+				padding-top: 40px;
+
+				.md-block({
+					padding-top: 26px;
+				});
+
+				.sm-block({
+					padding-top: 10px;
+				});
+
+				&::before {
+					content: attr(data-special-popup);
+					display: block;
+					width: 100%;
+					max-width: 224px;
+					height: 24px;
+					font-size: 12px;
+					line-height: 24px;
+					text-align: center;
+					background-color: @red;
+					color: @white;
+					font-weight: 700;
+					position: absolute;
+					top: 0;
+
+					.md-block({
+						font-size: 8px;
+						height: 16px;
+						line-height: 16px;
+						max-width: 150px;
+					});
+
+					.sm-block({
+						display: none;
+					});
+				}
+			}
+		}
 	}
 }

@@ -6,7 +6,7 @@
 		width: 100%;
 		height: 100vh;
 		padding: 45px 30px;
-		background: #eee;
+		background: @white;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -69,6 +69,14 @@
 			bottom: 40px;
 			transform: translate(-50%, 0px);
 			z-index: 11;
+
+			a {
+				color: @blue;
+			}
+
+			.header__lang--current {
+				color: @white;
+			}
 		}
 	}
 

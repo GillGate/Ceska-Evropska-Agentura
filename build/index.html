@@ -12,7 +12,9 @@
 			<button class="popup__close"><img src="img/close.svg" alt="Закрыть" width="30" height="30"></button>
 			<h2 class="popup__title">Получить <span>бесплатную</span> консультацию</h2>
 			<p class="popup__caption">
-				Оставьте заявку, и в ближайшее время мы свяжемся с Вами.  Наши операторы бесплатно проконсультируют Вас по сбору необходимых документов, вопросам касательно перезда, работы и жизни в Чехии.
+				Оставьте заявку, и в ближайшее время мы свяжемся с Вами.
+				<span>Наши операторы бесплатно проконсультируют Вас по сбору необходимых документов, вопросам касательно перезда, работы и жизни в Чехии.
+				</span>
 			</p>
 			<form class="form popup__form">
 				<label class="form__input"><input type="text" placeholder="Имя"></label>
@@ -191,7 +193,7 @@
 		<div class="container">
 			<h2>Актуальные вакансии</h2>
 			<ul class="vakancy__list vakancy__list--main">
-				<li class="vakancy__item">
+				<li class="vakancy__item vakancy__item--special" data-special="СПЕЦИАЛЬНЫЕ УСЛОВИЯ: оформление документов за счет работодателя" data-special-mobile="СПЕЦИАЛЬНЫЕ УСЛОВИЯ">
 					<div class="vakancy__head">
 						<div class="vakancy__info">
 							<div class="vakancy__img">
@@ -228,6 +230,67 @@
 							<span>Подробнее</span>
 							<span class="vakancy__button--mobile">Забронировать вакансию</span>
 						</button>
+					</div>
+					<div class="popup vakancy__popup">
+						<div class="popup__wrapper">
+							<button class="popup__close"><img src="img/close.svg" alt="Закрыть" width="30" height="30"></button>
+							<div class="vakancy__head">
+								<ul class="vakancy__categoryList">
+									<li class="categories"><a href="#">Завод</a></li>
+								</ul>
+								<div class="vakancy__price">
+									Заработная плата:
+									<span>105 Kč/час</span>
+								</div>
+							</div>
+							<div class="vakancy__info" data-special-popup="СПЕЦИАЛЬНЫЕ УСЛОВИЯ">
+								<div class="vakancy__img">
+									<img src="img/job-1.jpg" alt="">
+								</div>
+								<div class="vakancy__name">
+									<span class="vakancy__location">Plána nad Lužnicí</span>
+									<h3 class="vakancy__title">
+										Работник завода по изготовлению автомобильных деталей
+									</h3>
+								</div>
+							</div>
+							<div class="vakancy__desc">
+								<p>
+									Работодатель предоставляет жилье. 3000 крон / месяц (вычитается из заработной платы). Описание вакансии: изготовление, мойка, сушка и контроль качества деталей.
+								</p>
+								<p class="vakancy__desc--special">
+									<span>Специальные условия :</span> оформление документов за счет работодателя
+								</p>
+							</div>
+							<div class="vakancy__price vakancy__price--mobile">
+								Заработная плата:
+								<span>105 Kč/час</span>
+							</div>
+							<div class="vakancy__body">
+								<ul class="vakancy__conditions">
+									<li>для женщин и мужчин</li>
+									<li>с проживанием</li>
+								</ul>
+								<p class="vakancy__shifts">
+									Смены: <br>
+									<span class="vakancy__shift">18:00 - 6:00</span>
+									<span class="vakancy__shift">6:00 - 18:00</span>
+								</p>
+							</div>
+							<div class="vakancy__formWrapper">
+								<h3 class="vakancy__formTitle">
+									Это то, что Вы искали?
+								</h3>
+								<p class="vakancy__formCaption">
+									Оставьте заявку, и в ближайшее время наш менеджер свяжется с вами.
+								</p>
+								<form class="popup__form vakancy__form">
+									<label class="form__input"><input type="text" placeholder="Имя"></label>
+									<label class="form__input"><input type="tel" placeholder="Номер телефона"></label>
+									<button class="button form__button">Забронировать вакансию</button>
+								</form>
+							</div>
+						</div>
 					</div>
 				</li>
 				<li class="vakancy__item">
